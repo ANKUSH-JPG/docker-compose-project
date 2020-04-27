@@ -78,7 +78,7 @@ create a directory by any name . I used ghost as my main directory . change the 
 this will open vim editor for you to add the content into your docker-compose.yml file. now press i to insert into your file .
 and write the following code into the file :
     
-   ![](screenshot/Screenshot (333).png)
+![]{screenshot/Screenshot (333).png}
      
 
  
