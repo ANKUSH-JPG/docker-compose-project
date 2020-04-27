@@ -36,13 +36,13 @@ THE OPERATING SYSTEM THAT I WORKED WITH WAS REHL8(REDHAT ENTERPRISE LINUX VERSIO
 DOCKER:
    firstly , you need to set the permission to permissive so that you are able to connect to your docker deamon.
      
-     - SETENFORCE 0
+     - setenforce 0
    you can view the permissions by using:
      
-     - GETENFORCE
+     - getenforce
    once done you can use systemctl to start your docker and there you can launch your container's:
      
-     - SYSTEMCTL START DOCKER 
+     - systemctl start docker
      
 DOCKER-COMPOSE :
    i downloaded docker compose from the link mentioned below , download it from the same url:
@@ -64,8 +64,8 @@ for this project we require two images from docker hub:
     
 so , open your docker as per the steps mentioned above and pull the images from docker hub :
     
-    - DOCKER PULL GHOST
-    - DOCKER PULL MYSQL 
+    - docker pull ghost
+    - docker pull mysql
     
 this will pull the latest version of both the images . so that will be fine and will work here .
     
@@ -78,7 +78,7 @@ create a directory by any name . I used ghost as my main directory . change the 
 this will open vim editor for you to add the content into your docker-compose.yml file. now press i to insert into your file .
 and write the following code into the file :
     
-![]{screenshot/Screenshot (333).png}
+![]{screenshot/Screenshot(333).png}
      
 
  
