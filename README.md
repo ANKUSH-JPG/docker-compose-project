@@ -154,7 +154,8 @@ AND THE CONTAINERS WERE ALSO STOPPED:
 
 
   
- 
+# 11. FUTURE DEVELOPMENTS:
+This whole setup is done in local machine and no other tools like devops and all were used here for the monitoring and logs purpose so we can also integrate some devops tools to automate this system more and have more look and feel .You can also create your own webapp with many different softwares with other supported database servers.
      
 
  
