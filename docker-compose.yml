@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+        mysql_container:
+                image: mysql
+                restart: always
+                volumes: 
+                      - mysql_volume:/var/lib/mysql
+                environment:
+                        MYSQL_ROOT_PASSWORD: redhat
+                        MYSQL_USER: ankush
+                        MYSQL_PASSWORD: redhat
+                        MYSQL_DATABASE: newdb
+              
+               
+                
+        ghost_container:
+                image: ghost
+                restart: always
+                volumes: 
+                      - ghost_volume:/var/www/html
+                depends_on:
+                      - mysql_container
+
+                ports: 
+                      - 3001:2368
+                environment:
+                        database_client: mysql
+                        database_connection_host: mysql_container
+                        database_connection_user: ankush
+                        database_connection_password: redhat
+                        database_connection_database: newdb
+
+
+volumes:
+        mysql_volume:
+        ghost_volume:
+
