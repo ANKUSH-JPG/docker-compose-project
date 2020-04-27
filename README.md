@@ -34,18 +34,23 @@ THE OPERATING SYSTEM THAT I WORKED WITH WAS REHL8(REDHAT ENTERPRISE LINUX VERSIO
     
 # 4. SETTING UP DOCKER AND DOCKER-COMPOSE:(steps are explained after the docker installation)
 DOCKER:
-     firstly , you need to set the permission to permissive so that you are able to connect to your docker deamon.
+   firstly , you need to set the permission to permissive so that you are able to connect to your docker deamon.
+     
      - SETENFORCE 0
-     you can view the permissions by using:
+   you can view the permissions by using:
+     
      - GETENFORCE
-     once done you can use systemctl to start your docker and there you can launch your container's:
+   once done you can use systemctl to start your docker and there you can launch your container's:
+     
      - SYSTEMCTL START DOCKER 
      
 DOCKER-COMPOSE :
    i downloaded docker compose from the link mentioned below , download it from the same url:
+     
      - curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-$(uname -m)" -o                          /usr/local/bin/docker-compose
      
    now you will not be able to execute your docker-compose .so , you need to change the permissions of docker-compose to executable:
+     
      - chmod +x /usr/local/bin/docker-compose
      
    when you do the above steps , you will be ready with the docker-compose and docker now start creating your docker-compose.yml file.
@@ -53,10 +58,12 @@ DOCKER-COMPOSE :
    
 # 5. DOWNLOADING REQUIREMENTS FROM DOCKER HUB :
 for this project we require two images from docker hub:
+    
     - ghost image.
     - mysql server image.
     
 so , open your docker as per the steps mentioned above and pull the images from docker hub :
+    
     - DOCKER PULL GHOST
     - DOCKER PULL MYSQL 
     
@@ -64,13 +71,14 @@ this will pull the latest version of both the images . so that will be fine and 
     
 # 6. CREATING A DOCKER-COMPOSE.YML FILE:
 create a directory by any name . I used ghost as my main directory . change the directory to your main directory and create a file       named docker-compose into that directory and open it using the vim editor.
+    
     - cd ghost
     - vim docker-compose.yml
     
 this will open vim editor for you to add the content into your docker-compose.yml file. now press i to insert into your file .
 and write the following code into the file :
     
-   ![]{screenshot/Screenshot (333).png}
+   ![](screenshot/Screenshot (333).png)
      
 
  
